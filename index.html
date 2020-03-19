@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html>
 <title>Anna Wong</title>
+
 <style>
 h1{
 	text-align:center;
@@ -21,24 +23,71 @@ p{
 body{
   background-position-x:0%;
   background-color:black;
-  background-image: url("CS.png");
-  background-repeat: no-repeat;
-  background-attachment:scroll;
+
   
+}
+
+.fadeOut{
+  position: fixed;
+  z-index:-1;
+  opacity:0.8;
+  animation-name:fadeOutAnimation;
+  animation-duration:4s;
+  animation-fill-mode: forwards;
+}
+.fadeIn{
+  position: fixed;
+  z-index:-1;
+  opacity:0.8;
+  animation-name:fadeInAnimation;
+  animation-duration:4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutAnimation{
+  from {opacity: .8;}
+  to {opacity: 0;}
+}
+
+@keyframes fadeInAnimation{
+  from {opacity: 0;}
+  to {opacity: .8;}
 }
 
 </style>
 
+<script>
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+
+  if( window.scrollY > 50)
+  {
+    document.getElementById("pic").className = "fadeOut";
+  }
+  if( window.scrollY < 50)
+  {
+    document.getElementById("pic").className = "fadeIn";
+  }
+  
+
+}
+</script>
 
 
-<body>
+<body id="theBody"> 
+  <div class = "back" id="pic">
+    <img src = "CS.png">
+  </div>
 <H1 style="font-size:350%"><br/>ANNA WONG</H1>
 
 <h2 style="line-height: 0px;">Chinese natural scientist<br/></h2>
 <p style = "font-size:110%; line-height: 0px"> Bachelors of natural science</p>
 <p style = "font-size:75%; line-height: 0px"> Massey University-2018</p>
 
-<h1>
+
+<h1 id = "on">
   <br/><br/><br/><br/> 
   Wong Quotes
 </h1>  
