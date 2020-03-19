@@ -29,7 +29,8 @@ body{
 
 .scrollbar{
   position:fixed;
-  padding-right:50%;
+  right:10px;
+  text-align:center;
 }
 
 .fadeOut{
@@ -78,6 +79,16 @@ function myFunction() {
   
 
 }
+
+function enlarge(a)
+{
+  document.getElementById(a) .style = "font-size:150%"
+}
+
+function unlarge(a)
+{
+  document.getElementById(a) .style = "font-size:100%"
+}
 </script>
 
 
@@ -86,12 +97,22 @@ function myFunction() {
 <div class = "fadeIn" id="pic">
   <img src = "CS.png">
 </div>
-  
+
+<div class = "scrollbar">
+  <p line-height: 1px id = "2015" onmouseover= enlarge("2015") onmouseout= unlarge("2015") >2015</p>
+  <p line-height: 1px; id = "2016" onmouseover= enlarge("2016") onmouseout= unlarge("2016") >2016</p>
+  <p id = "2017" style = "text-align:left">2017</p>
+  <p id = "2018">2018</p>
+  <p id = "2019">2019</p>
+  <p id = "2020">2020</p>
+    
+</div>
+
 <H1 style="font-size:350%"><br/>ANNA WONG</H1>
 
-<h2 style="line-height: 0px;">Chinese natural scientist<br/></h2>
-<p style = "font-size:110%; line-height: 0px"> Bachelors of natural science</p>
-<p style = "font-size:75%; line-height: 0px"> Massey University-2018</p>
+<h2 style="line-height: 1px;">Chinese natural scientist<br/></h2>
+<p style = "font-size:110%; line-height: 1px"> Bachelors of natural science</p>
+<p style = "font-size:75%; line-height: 1px"> Massey University-2018</p>
 
 
 
@@ -99,7 +120,7 @@ function myFunction() {
   <br/><br/><br/><br/> 
   Wong Quotes
 </h1>  
-  <h2>
+  <h2 id = 2015h >
   2015
 </h2>
 
