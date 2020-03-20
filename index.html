@@ -29,8 +29,31 @@ body{
 
 .scrollbar{
   position:fixed;
+  padding-right: 5px;
   right:10px;
+  top:35%;
+
+  
   text-align:center;
+}
+
+.moveout
+{
+  line-height: 4px;
+  padding-right: 0px;
+  animation-name:MoveOutWard;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+
+}
+
+.movein
+{
+ line-height:4px;
+ padding-right:0px;
+ animation-name:MoveInWard;
+ animation-duration:1s;
+ animation-fill-mode:forwards;
 }
 
 .fadeOut{
@@ -60,6 +83,16 @@ body{
   to {opacity: .8;}
 }
 
+@keyframes MoveOutWard{
+  from{padding-right:0px;}
+  to{padding-right:15px;}
+}
+
+@keyframes MoveInWard{
+  from{padding-right:15px;}
+  to{padding-right:0px;}
+}
+
 </style>
 
 <script>
@@ -80,14 +113,19 @@ function myFunction() {
 
 }
 
+function goto(a)
+{
+  window.location.href = a;
+}
+
 function enlarge(a)
 {
-  document.getElementById(a) .style = "font-size:150%"
+  document.getElementById(a) .className = "moveout"
 }
 
 function unlarge(a)
 {
-  document.getElementById(a) .style = "font-size:100%"
+  document.getElementById(a) .className = "movein"
 }
 </script>
 
@@ -99,12 +137,12 @@ function unlarge(a)
 </div>
 
 <div class = "scrollbar">
-  <p line-height: 1px id = "2015" onmouseover= enlarge("2015") onmouseout= unlarge("2015") >2015</p>
-  <p line-height: 1px; id = "2016" onmouseover= enlarge("2016") onmouseout= unlarge("2016") >2016</p>
-  <p id = "2017" style = "text-align:left">2017</p>
-  <p id = "2018">2018</p>
-  <p id = "2019">2019</p>
-  <p id = "2020">2020</p>
+  <p style = "line-height: 4px" id = "2015" onmouseover= enlarge("2015"); onmouseout= unlarge("2015") onmousedown = goto("#2015h")>2015</p>
+  <p style = "line-height: 4px" id = "2016" onmouseover= enlarge("2016") onmouseout= unlarge("2016") onmousedown = goto("#2016h")>2016</p>
+  <p style = "line-height: 4px" id = "2017" onmouseover= enlarge("2017") onmouseout= unlarge("2017") onmousedown = goto("#2017h")>2017</p>
+  <p style = "line-height: 4px" id = "2018" onmouseover= enlarge("2018") onmouseout= unlarge("2018") onmousedown = goto("#2018h")>2018</p>
+  <p style = "line-height: 4px" id = "2019" onmouseover= enlarge("2019") onmouseout= unlarge("2019") onmousedown = goto("#2019h")>2019</p>
+  <p style = "line-height: 4px" id = "2020" onmouseover= enlarge("2020") onmouseout= unlarge("2020") onmousedown = goto("#2020h")>2020</p>
     
 </div>
 
@@ -134,7 +172,7 @@ Wong: "Naan Bread?" <br/>
 - Anna Wong (2015)<br/><br/>
 </p>
 
-<h2>
+<h2 id = 2016h >
   2016
 </h2>
 
@@ -179,7 +217,7 @@ Wong: "The vacuum?" <br/>
 - Sexist Wong (2016)<br/><br/>
 </p>
 
-<h2>
+<h2 id = 2017h>
   2017
 </h2>
 
@@ -234,7 +272,7 @@ Me: "Everyone is so white"<br/>
 Wong :"Maybe it's too dark to see anyone else"<br/>
 - Racist Wong (2017)<br/><br/>
 </p>
-<h2>
+<h2 id = 2018h>
   2018
 </h2>
 <p>
@@ -349,7 +387,7 @@ I just remember because we did it so much. “<br/>
 - Savage Wong (2018)<br/><br/>
 </p>
 
-<h2>
+<h2 id = 2019h>
   2019
 </h2>
 
@@ -411,7 +449,7 @@ Wang Gang: "Name 3 things that are white"<br/>
 Wong:  "Blankets, towels, people."<br/>
 - Racist Wong (2019)<br/><br/>
 </p>
-<h2>
+<h2 id = 2020h>
 2020
 </h2>
 <p>
