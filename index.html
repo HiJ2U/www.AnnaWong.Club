@@ -99,6 +99,7 @@ body{
 
 window.onscroll = function() {myFunction()};
 
+
 function myFunction() {
 
   if( window.scrollY > 50)
@@ -108,9 +109,68 @@ function myFunction() {
   if( window.scrollY < 50)
   {
     document.getElementById("pic").className = "fadeIn";
-  }
-  
 
+  }
+  if (document.getElementById("2015h").getBoundingClientRect().top < 0 && document.getElementById("2016h").getBoundingClientRect().top > 0 ) 
+  {
+    enlarge("2015");
+  }
+  else
+  {
+    unlarge("2015");
+  }
+  if (document.getElementById("2016h").getBoundingClientRect().top < 0 && document.getElementById("2017h").getBoundingClientRect().top > 0 ) 
+  {
+    enlarge("2016");
+  }
+  else
+  {
+    unlarge("2016");
+  }
+  if (document.getElementById("2016h").getBoundingClientRect().top < 0 && document.getElementById("2017h").getBoundingClientRect().top > 0 ) 
+  {
+    enlarge("2016");
+  }
+  else
+  {
+    unlarge("2016");
+  }
+  if (document.getElementById("2017h").getBoundingClientRect().top < 0 && document.getElementById("2018h").getBoundingClientRect().top > 0 ) 
+  {
+    enlarge("2017");
+  }
+  else
+  {
+    unlarge("2017");
+  }
+  if (document.getElementById("2018h").getBoundingClientRect().top < 0 && document.getElementById("2019h").getBoundingClientRect().top > 0 ) 
+  {
+    enlarge("2018");
+  }
+  else
+  {
+    unlarge("2018");
+  }
+  if (document.getElementById("2019h").getBoundingClientRect().top < 0 && document.getElementById("2020h").getBoundingClientRect().top > 0 ) 
+  {
+    enlarge("2019");
+  }
+  else
+  {
+    unlarge("2019");
+  }
+  if (document.getElementById("2020h").getBoundingClientRect().top < 0 ) 
+  {
+    enlarge("2020");
+  }
+  else
+  {
+    unlarge("2020");
+  }
+
+  document.getElementById("2015").innerHTML = b;
+  document.getElementById("2016").innerHTML = window.scrollY;
+  
 }
 
 function goto(a)
